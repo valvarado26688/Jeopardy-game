@@ -1,0 +1,34 @@
+body {
+    background-color: darkkhaki;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+}
+h2{
+    display: flex;
+    justify-content: center;
+}
+.playBox{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    margin: 20px;
+}
+.playContainer {
+    border: solid black;
+    padding: 10px;
+    background-color: cadetblue;
+}
+.footerBox {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    margin: 20px;
+    margin-top: 150px;
+}
+.footerContainer {
+    border: solid black;
+    padding: 10px;
+    background-color: darkgrey;
+}
