@@ -1,0 +1,89 @@
+.titleContainer {
+    display: flex;
+    justify-content: center;
+}
+.turnContainer {
+    display: flex;
+    justify-content: center;
+}
+.catagoryContainer {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+.catagoryContainer div {
+    border: solid black;
+    padding: 2vh;
+    flex: 1;
+}
+.row1 {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+.row1 div {
+    border: solid black;
+    padding: 2vh;
+    flex: 1;
+}
+.row2 {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+.row2 div {
+    border: solid black;
+    padding: 2vh;
+    flex: 1;
+}
+.row3 {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+.row3 div {
+    border: solid black;
+    padding: 2vh;
+    flex: 1;
+}
+.row4 {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+.row4 div {
+    border: solid black;
+    padding: 2vh;
+    flex: 1;
+}
+.row5 {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+.row5 div {
+    border: solid black;
+    padding: 2vh;
+    flex: 1;
+}
+.inputContainer {
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+.inputContainer input {
+    font-size: xx-large;
+    width: 30%;
+}
+.guessPassContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+}
+.guessPassContainer div {
+    border: solid black;
+    font-size: xx-large;
+    padding: 0.8%;
+}
