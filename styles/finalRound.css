@@ -1,0 +1,31 @@
+.finalRoundContainer {
+    display: flex;
+    justify-content: center;
+}
+.finalRoundContainer h1 {
+    font-size: 8vh;
+}
+.finalCategoryContainer {
+    display: flex;
+    justify-content: center;
+}
+.finalCategoryContainer div {
+    border: solid black;
+    font-size: 5vh;
+    padding: 1%;
+    background-color: antiquewhite;
+    margin-bottom: 5vh;
+}
+.finalQuestionContainer {
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+}
+.finalQuestionContainer .finalQuestionBox {
+    background-color: antiquewhite;
+    border: solid black;
+    font-size: 5vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding: 15vh;
+}
