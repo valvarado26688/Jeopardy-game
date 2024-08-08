@@ -29,3 +29,39 @@
     padding-bottom: 10vh;
     padding: 15vh;
 }
+.pointBetContainer {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+.finalAnswerContainer {
+    display: flex;
+    justify-content: center;
+}
+.pointBetContainer input {
+    font-size: x-large;
+    text-align: center;
+}
+.finalAnswerContainer input {
+    font-size: x-large;
+    text-align: center;
+}
+.betContainer {
+    display: flex;
+    justify-content: center;
+    margin: 3%;
+}
+.betContainer div {
+    font-size: xx-large;
+    border: solid black;
+    padding: 1%;
+}
+.betContainer div:hover {
+    background-color: antiquewhite;
+}
+footer {
+    text-align: center;
+    border: solid black;
+    font-size: xx-large;
+    background-color: antiquewhite;
+}
