@@ -3,22 +3,6 @@ import placeholderQuestions from "./placeholder-questions.js";
 console.log({ placeholderQuestions });
 
 
-
-// console.log(placeholderQuestions.category);
-// console.log(placeholderQuestions[0]);
-// console.log(placeholderQuestions.includes(category, "nature"));
-// let cat = placeholderQuestions.filter(() => placeholderQuestions.category === "Nature");
-// console.log(cat);
-
-// placeholderQuestions.forEach((e) => {
-//     console.log(e.category);
-// })
-
-// let q100 = document.getElementById("q100");
-
-
-
-
 //this function stores all the FIRST questions of every catagory into an array
 //not sure if this would be usefull
 function firstQuestion(placeholderQuestions){
@@ -33,11 +17,12 @@ function firstQuestion(placeholderQuestions){
     return firstQuestions;
 }
 // let questionsByCategory = firstQuestion(placeholderQuestions);
-// console.log(questionsByCategory); 
+// console.log(questionsByCategory); ????
 
 
-//hopefully this will give me everything...
-//broken at the moment.
+
+
+//this works
 class QuestionMachine5000 {
     constructor(questions) {
         this.questions = questions;
@@ -55,26 +40,32 @@ class QuestionMachine5000 {
 }
 
 let questions = new QuestionMachine5000(placeholderQuestions);
-let newQuestion
+let questionList
 
-newQuestion = questions.questionsByCat("Nature");
-console.log(newQuestion);
+questionList = questions.questionsByCat("Nature");
+console.log(questionList);
 
-//====== JUST FOUND OUT THESE DO THE SAME THING =======
-console.log(placeholderQuestions[1]);
-// newQuestion = questions.questionsByCatNum("Nature", 3);
-//although it might still be usefull
-console.log(newQuestion.question);
+//====== THESE DO THE SAME THING =======
+// console.log(placeholderQuestions[1]);
+//questionList = questions.questionsByCatNum("Nature", 3);
 
 
 
-// document.querySelectorAll('exampleClassGoesHere').forEach( () => {do something } ) 
 
-let nature = document.querySelectorAll("#nature"); //testing query selector
+
+
+
+
+//====== attempts to put words on the graph ========
+let nature = document.querySelectorAll("#nature");
 // console.log(test);
-
 nature.forEach((e, i) => { //"i" here is the second argument which represents the index of the array. [0] [1]...
-    e.textContent = newQuestion[i]
+    e = questionList[i];
+    // console.log(e);
 });
+// nature.forEach((e) => {
 
-console.log(newQuestion[0]);
+// })
+console.log(nature[0]);
+
+//not sure why this stuff doesnt work 
