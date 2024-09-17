@@ -40,15 +40,16 @@ function firstQuestion(placeholderQuestions){
 //broken at the moment.
 class QuestionMachine5000 {
     constructor(questions) {
-        this.question = questions;
+        this.questions = questions;
     }
     questionsByCat(category) {
-        return this.question.filter((q) => {
-            q.category === category;
-        })
+        return this.questions.filter(q => q.category === category);
     }
 }
 
-let questions = new QuestionMachine5000(placeholderQuestions)
+let questions = new QuestionMachine5000(placeholderQuestions);
+let newQuestion
 
-console.log(questions.questionsByCat(`Nature`));
+newQuestion = questions.questionsByCat("Nature");
+console.log(newQuestion);
+console.log(placeholderQuestions[1]);
