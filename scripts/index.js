@@ -45,6 +45,13 @@ class QuestionMachine5000 {
     questionsByCat(category) {
         return this.questions.filter(q => q.category === category);
     }
+
+    //method helps get any specific question easily.
+    //filters category uses num as an index number(starting from 0) 
+    questionsByCatNum(category, num){
+        let question = this.questionsByCat(category);
+        return question[num];
+    }
 }
 
 let questions = new QuestionMachine5000(placeholderQuestions);
@@ -52,4 +59,13 @@ let newQuestion
 
 newQuestion = questions.questionsByCat("Nature");
 console.log(newQuestion);
+
+//====== JUST FOUND OUT THESE DO THE SAME THING =======
 console.log(placeholderQuestions[1]);
+newQuestion = questions.questionsByCatNum("Nature", 3);
+//although it might still be usefull
+console.log(newQuestion.question);
+
+
+
+// document.querySelectorAll('exampleClassGoesHere').forEach( () => {do something } ) 
