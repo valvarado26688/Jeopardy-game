@@ -62,10 +62,19 @@ console.log(newQuestion);
 
 //====== JUST FOUND OUT THESE DO THE SAME THING =======
 console.log(placeholderQuestions[1]);
-newQuestion = questions.questionsByCatNum("Nature", 3);
+// newQuestion = questions.questionsByCatNum("Nature", 3);
 //although it might still be usefull
 console.log(newQuestion.question);
 
 
 
 // document.querySelectorAll('exampleClassGoesHere').forEach( () => {do something } ) 
+
+let nature = document.querySelectorAll("#nature"); //testing query selector
+// console.log(test);
+
+nature.forEach((e, i) => { //"i" here is the second argument which represents the index of the array. [0] [1]...
+    e.textContent = newQuestion[i]
+});
+
+console.log(newQuestion[0]);
