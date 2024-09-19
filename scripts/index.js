@@ -60,7 +60,9 @@ questionList = questions.questionsByCat("Nature");
 let nature = document.querySelectorAll(".nature");
 console.log(nature);
 nature.forEach((e, i) => { //"i" here is the second argument which represents the index of the array. [0] [1]...
-    console.log(e);
+    e.addEventListener("click", () => {
+        e.textContent = questionList[i].question; //this works and its awsome 
+    })
 });
 
 
