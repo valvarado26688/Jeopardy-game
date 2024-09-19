@@ -1,6 +1,6 @@
 // Do not change the import statement
 import placeholderQuestions from "./placeholder-questions.js";
-console.log({ placeholderQuestions });
+// console.log({ placeholderQuestions });
 
 
 //this function stores all the FIRST questions of every catagory into an array
@@ -43,7 +43,7 @@ let questions = new QuestionMachine5000(placeholderQuestions);
 let questionList
 
 questionList = questions.questionsByCat("Nature");
-console.log(questionList);
+// console.log(questionList);
 
 //====== THESE DO THE SAME THING =======
 // console.log(placeholderQuestions[1]);
@@ -57,15 +57,14 @@ console.log(questionList);
 
 
 //====== attempts to put words on the graph ========
-let nature = document.querySelectorAll("#nature");
-// console.log(test);
+let nature = document.querySelectorAll(".nature");
+console.log(nature);
 nature.forEach((e, i) => { //"i" here is the second argument which represents the index of the array. [0] [1]...
-    e = questionList[i];
-    // console.log(e);
+    console.log(e);
 });
-// nature.forEach((e) => {
 
-// })
-console.log(nature[0]);
 
-//not sure why this stuff doesnt work 
+
+
+console.log(nature);
+
