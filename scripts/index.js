@@ -50,39 +50,39 @@ nature.forEach((e, i) => {
         e.textContent = questionList[i].question;
     })
 });
-questionList = questions.questionsByCat("Animals");
+let questionList2 = questions.questionsByCat("Animals");
 let animals = document.querySelectorAll(".animals");
 animals.forEach((e, i) => { 
     e.addEventListener("click", () => {
-        e.textContent = questionList[i].question;
+        e.textContent = questionList2[i].question;
     })
 });
-questionList = questions.questionsByCat("Computers");
+let questionList3 = questions.questionsByCat("Computers");
 let computers = document.querySelectorAll(".computers");
 computers.forEach((e, i) => { 
     e.addEventListener("click", () => {
-        e.textContent = questionList[i].question;
+        e.textContent = questionList3[i].question;
     })
 });
-questionList = questions.questionsByCat("Mythology");
+let questionList4 = questions.questionsByCat("Mythology");
 let mythology = document.querySelectorAll(".mythology");
 mythology.forEach((e, i) => { 
     e.addEventListener("click", () => {
-        e.textContent = questionList[i].question;
+        e.textContent = questionList4[i].question;
     })
 });
-questionList = questions.questionsByCat("History");
+let questionList5 = questions.questionsByCat("History");
 let history = document.querySelectorAll(".history");
 history.forEach((e, i) => { 
     e.addEventListener("click", () => {
-        e.textContent = questionList[i].question;
+        e.textContent = questionList5[i].question;
     })
 });
-questionList = questions.questionsByCat("General");
+let questionList6 = questions.questionsByCat("General");
 let general = document.querySelectorAll(".general");
 general.forEach((e, i) => { 
     e.addEventListener("click", () => {
-        e.textContent = questionList[i].question;
+        e.textContent = questionList6[i].question;
     })
 });
 
