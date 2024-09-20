@@ -1,6 +1,5 @@
 // Do not change the import statement
 import placeholderQuestions from "./placeholder-questions.js";
-// console.log({ placeholderQuestions });
 
 
 //this function stores all the FIRST questions of every catagory into an array
@@ -8,7 +7,7 @@ import placeholderQuestions from "./placeholder-questions.js";
 function firstQuestion(placeholderQuestions){
     const firstQuestions = {};
 
-    placeholderQuestions.forEach((e) => {
+    placeholderQuestions.forEach((e, i) => {
         if(!firstQuestions[e.category]) {
             firstQuestions[e.category] = e.question;
         }
@@ -16,10 +15,6 @@ function firstQuestion(placeholderQuestions){
 
     return firstQuestions;
 }
-// let questionsByCategory = firstQuestion(placeholderQuestions);
-// console.log(questionsByCategory); ????
-
-
 
 
 //this works
@@ -38,30 +33,56 @@ class QuestionMachine5000 {
         return question[num];
     }
 }
-
 let questions = new QuestionMachine5000(placeholderQuestions);
-let questionList
 
-questionList = questions.questionsByCat("Nature");
 // console.log(questionList);
 
-//====== THESE DO THE SAME THING =======
-// console.log(placeholderQuestions[1]);
-//questionList = questions.questionsByCatNum("Nature", 3);
+// console.log(nature);
 
 
+//in order for the game to function in the way that i want it, i would need to put all category questions into 
+//one event loop. that means the nature category must be able to be a category variable somehow. 
 
-
-
-
-
-
-//====== attempts to put words on the graph ========
+let questionList = questions.questionsByCat("Nature");
 let nature = document.querySelectorAll(".nature");
-console.log(nature);
-nature.forEach((e, i) => { //"i" here is the second argument which represents the index of the array. [0] [1]...
+nature.forEach((e, i) => { 
     e.addEventListener("click", () => {
-        e.textContent = questionList[i].question; //this works and its awsome 
+        e.textContent = questionList[i].question;
+    })
+});
+questionList = questions.questionsByCat("Animals");
+let animals = document.querySelectorAll(".animals");
+animals.forEach((e, i) => { 
+    e.addEventListener("click", () => {
+        e.textContent = questionList[i].question;
+    })
+});
+questionList = questions.questionsByCat("Computers");
+let computers = document.querySelectorAll(".computers");
+computers.forEach((e, i) => { 
+    e.addEventListener("click", () => {
+        e.textContent = questionList[i].question;
+    })
+});
+questionList = questions.questionsByCat("Mythology");
+let mythology = document.querySelectorAll(".mythology");
+mythology.forEach((e, i) => { 
+    e.addEventListener("click", () => {
+        e.textContent = questionList[i].question;
+    })
+});
+questionList = questions.questionsByCat("History");
+let history = document.querySelectorAll(".history");
+history.forEach((e, i) => { 
+    e.addEventListener("click", () => {
+        e.textContent = questionList[i].question;
+    })
+});
+questionList = questions.questionsByCat("General");
+let general = document.querySelectorAll(".general");
+general.forEach((e, i) => { 
+    e.addEventListener("click", () => {
+        e.textContent = questionList[i].question;
     })
 });
 
