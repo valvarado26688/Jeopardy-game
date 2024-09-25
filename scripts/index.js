@@ -16,7 +16,6 @@ function firstQuestion(placeholderQuestions){
     return firstQuestions;
 }
 
-
 //this works
 class QuestionMachine5000 {
     constructor(questions) {
@@ -33,61 +32,38 @@ class QuestionMachine5000 {
         return question[num];
     }
 }
-let questions = new QuestionMachine5000(placeholderQuestions);
+let sortedQuestions = new QuestionMachine5000(placeholderQuestions);
 
-// console.log(questionList);
-
-// console.log(nature);
-
-
-//in order for the game to function in the way that i want it, i would need to put all category questions into 
-//one event loop. that means the nature category must be able to be a category variable somehow. 
-
-let questionList = questions.questionsByCat("Nature");
-let nature = document.querySelectorAll(".nature");
-nature.forEach((e, i) => { 
-    e.addEventListener("click", () => {
-        e.textContent = questionList[i].question;
-    })
-});
-let questionList2 = questions.questionsByCat("Animals");
-let animals = document.querySelectorAll(".animals");
-animals.forEach((e, i) => { 
-    e.addEventListener("click", () => {
-        e.textContent = questionList2[i].question;
-    })
-});
-let questionList3 = questions.questionsByCat("Computers");
-let computers = document.querySelectorAll(".computers");
-computers.forEach((e, i) => { 
-    e.addEventListener("click", () => {
-        e.textContent = questionList3[i].question;
-    })
-});
-let questionList4 = questions.questionsByCat("Mythology");
-let mythology = document.querySelectorAll(".mythology");
-mythology.forEach((e, i) => { 
-    e.addEventListener("click", () => {
-        e.textContent = questionList4[i].question;
-    })
-});
-let questionList5 = questions.questionsByCat("History");
-let history = document.querySelectorAll(".history");
-history.forEach((e, i) => { 
-    e.addEventListener("click", () => {
-        e.textContent = questionList5[i].question;
-    })
-});
-let questionList6 = questions.questionsByCat("General");
-let general = document.querySelectorAll(".general");
-general.forEach((e, i) => { 
-    e.addEventListener("click", () => {
-        e.textContent = questionList6[i].question;
-    })
-});
+//query selectors are used to iterate event listeners on cells of each category. 
+// let questionList = questions.questionsByCat("Nature");
+// let nature = document.querySelectorAll(".nature");
+// nature.forEach((e, i) => { 
+//     e.addEventListener("click", () => {
+//         e.textContent = questionList[i].question;
+//     })
+// });
 
 
 
 
-console.log(nature);
 
+
+//attempt to make one COLUMN in js and just loop it for all me categories 
+
+let questionPoints = 100
+let column = document.getElementById("columnContainer");
+const question = Array(5);
+
+
+for(let i = 1; i < 5; i++){
+    for(let e of question) {
+        let div = document.createElement("div");
+        div.textContent = questionPoints;
+        div.className = "column";
+        column.append(div);
+        questionPoints = questionPoints + 100;
+        if(questionPoints === 600) {
+            questionPoints = 100;
+        }
+    }
+}
