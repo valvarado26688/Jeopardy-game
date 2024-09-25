@@ -51,19 +51,35 @@ let sortedQuestions = new QuestionMachine5000(placeholderQuestions);
 //attempt to make one COLUMN in js and just loop it for all me categories 
 
 let questionPoints = 100
-let column = document.getElementById("columnContainer");
-const question = Array(5);
+// let column = document.getElementById("column1");
+// const questionBox = Array(5);
+
+// let graph = document.querySelectorAll(".column");
+
+let gridContainer = document.getElementById("gridContainer");
 
 
-for(let i = 1; i < 5; i++){
-    for(let e of question) {
+//logic to make parent elements 
+for(let i = 0; i < 6; i++) {
+    let parentColumn = document.createElement("div");
+    gridContainer.append(parentColumn);
+    parentColumn.className = "parentColumn";
+    for(let i = 0; i < 5; i++){
         let div = document.createElement("div");
         div.textContent = questionPoints;
-        div.className = "column";
-        column.append(div);
+        div.className = "divColumn";
+        parentColumn.appendChild(div); //this was confusing
         questionPoints = questionPoints + 100;
         if(questionPoints === 600) {
             questionPoints = 100;
         }
     }
 }
+
+
+
+
+
+
+
+  

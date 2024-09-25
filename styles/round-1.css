@@ -6,8 +6,6 @@
     display: flex;
     justify-content: center;
 }
-
-
 .categoryContainer {
     background-color: antiquewhite;
     display: flex;
@@ -25,17 +23,22 @@
 
 
 
-
-.row1 {
-    background-color: antiquewhite;
+/* aranges all my column containers*/
+.gridContainer{
     display: flex;
+    flex-direction: row; /* how the hell does this put my things in COLUMNS*/
     justify-content: center;
 }
-.row1 div {
-    border: solid black;
-    padding: 2vh;
+/* i wanted the columns to stretch and use the whole parent box */
+.parentColumn{
     flex: 1;
+}
+.divColumn{
+    padding: 2vh;
+    background-color: antiquewhite;
+    border: solid black;
     text-align: center;
+    /* flex: 1; */
 }
 
 
