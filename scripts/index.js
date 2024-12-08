@@ -1,5 +1,7 @@
-import placeholderQuestions from "./placeholder-questions.js";
-
+import menu from "./menu.js";
+import round1 from "./round1.js";
+import questions from "./questions.js";
+// import questions from "./questions.js";
 //consider making the landing page with js dom manipulation for a smooth user experience
 //game might need to be in a loop?
 
@@ -9,36 +11,25 @@ import placeholderQuestions from "./placeholder-questions.js";
 
 //once questions are sorted, use the array to make a dynamic chart containing each question
 
-//isolating last question
-console.log(placeholderQuestions);
-const finalQuestion = placeholderQuestions.pop();
-console.log(finalQuestion);
+// console.log(questions.firstRoundQuestions);
+//game state 
+console.log(questions.questions.firstRoundQuestions);
+class Game {
+    constructor(currentState) {
+        this.currentState = currentState;
+    }
+    updateState(newState) {
+        this.currentState = newState;
+        return newState
+    }
+}
+let game = new Game (null);
+//===== dom manipulation here ====
 
+const playButton = game.updateState(menu());
+playButton.addEventListener("click", () => {
+    // alert("button clicked!!!!");
+    game.updateState(round1(questions.questions.firstRoundQuestions));
+});
+//================================
 
-// counter < 5 = first questions; counter > 5 = second questions
-//this is the easiest way i can come up with on my own, and understand
-let counter = -1;
-const firstRoundQuestions = placeholderQuestions.map((e) => {
-    counter++;
-    if(counter === 10) {
-        counter = 0;
-    }
-    if(counter < 5) {
-        return e;
-    }
-    return null;
-}).filter((e) => e !== null);
-console.log(firstRoundQuestions);
-
-counter = -1
-const secondRoundQuestions = placeholderQuestions.map((e) => {
-    counter++;
-    if(counter === 10) {
-        counter = 0;
-    }
-    if(counter >= 5) {
-        return e;
-    }
-    return null;
-}).filter((e) => e !== null);
-console.log(secondRoundQuestions);
