@@ -1,17 +1,13 @@
 import menu from "./menu.js";
 import round1 from "./round1.js";
 import questions from "./questions.js";
-// import questions from "./questions.js";
-//consider making the landing page with js dom manipulation for a smooth user experience
-//game might need to be in a loop?
 
-//sort placeholder questions 
-//keep in mind that placeholder questions is an array of objects, hence it could be sorted iterativly 
-//make two arrays of objects, 5 questions forEach category
+window.addEventListener("load", function() {
+    this.document.body.style.opacity = 1;
+})
 
-//once questions are sorted, use the array to make a dynamic chart containing each question
+//its all js.. js
 
-// console.log(questions.firstRoundQuestions);
 //game state 
 console.log(questions.questions.firstRoundQuestions);
 class Game {
@@ -23,13 +19,36 @@ class Game {
         return newState
     }
 }
+
+
+
+//player turn state needs to be handled
+//player state needs to be handled
+
+class Player {
+    constructor(playerScore) {
+        this.playerScore = playerScore;
+    }
+}
+
+
+
+
+
+// let player1 = new P
 let game = new Game (null);
+
+
 //===== dom manipulation here ====
 
 const playButton = game.updateState(menu());
 playButton.addEventListener("click", () => {
-    // alert("button clicked!!!!");
-    game.updateState(round1(questions.questions.firstRoundQuestions));
+    document.body.style.opacity = 0;
+
+    //setTimout delays code for fade out animation
+    setTimeout(() => {
+        game.updateState(round1(questions.questions.firstRoundQuestions));
+    }, 500);
 });
 //================================
 

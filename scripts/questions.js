@@ -1,5 +1,9 @@
 import placeholderQuestions from "./placeholder-questions.js";
 
+//new goal, export this code as a function that can be used in index.js
+//dont remember the comment above, but i think i was trying to make the questions dynamic
+
+
 //isolating last question
 const finalQuestion = placeholderQuestions.pop();
 
@@ -16,7 +20,6 @@ const firstRoundQuestions = placeholderQuestions.map((e) => {
     }
     return null;
 }).filter((e) => e !== null);
-// console.log(firstRoundQuestions);
 
 counter = -1
 const secondRoundQuestions = placeholderQuestions.map((e) => {
@@ -29,7 +32,6 @@ const secondRoundQuestions = placeholderQuestions.map((e) => {
     }
     return null;
 }).filter((e) => e !== null);
-// console.log(secondRoundQuestions);
 const questions = {
     firstRoundQuestions: firstRoundQuestions,
     secondRoundQuestions: secondRoundQuestions,
