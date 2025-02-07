@@ -1,0 +1,87 @@
+.title {
+    border: solid black;
+    background-color: antiquewhite;
+    padding: 2%;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.image {
+    /* streeettch */
+    height: 40vh;
+    width: 80vw;
+}
+.playButton {
+    width: 10vw;
+    border: solid black;
+    text-align: center;
+    font-size: x-large;
+    background-color: antiquewhite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1%;
+}
+/* this is pretty sick, not my code */
+.playButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+/* ============ rounds ============ */
+
+.categoryContainer {
+    display: flex;
+    width: 80%;
+}
+.category {
+    text-align: center;
+    border: solid black;
+    padding: 1%;
+    background-color: antiquewhite;
+    width: 100%;
+}
+.gameChart {
+    display: flex;
+    width: 80%;
+    height: 40%;
+    justify-content: stretch;
+}
+.columnContainer {
+    text-align: center;
+    flex-grow: 1;
+    height: auto;
+}
+.column {
+    border: solid black;
+    padding: 1%;
+    text-align: center;
+    background-color: antiquewhite;
+    height: 15%;
+    transition: transform 0.3s ease, box-shadow 0.3s, background-color 1s ease;
+}
+.column:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+.questionBox {
+    background-color: antiquewhite;
+    padding: 2%;
+    text-align: center;
+    border: solid black;
+    /* max-height: 200px; */
+    /* overflow: hidden; */
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    transition: all 0.5s ease-in-out;
+}
+.scoreContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
